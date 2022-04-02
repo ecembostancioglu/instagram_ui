@@ -15,9 +15,8 @@ class _HomePageState extends State<HomePage> {
   static const TextStyle _style=
       TextStyle(fontSize: 30,fontWeight: FontWeight.bold);
 
-  static const List<Widget> _widget=<Widget>[
-    Text(TextConstants.home,style: _style),
-    Text(TextConstants.search,style: _style),
+  static List<Widget> _widget=<Widget>[
+    StoryProfile(),
     Text(TextConstants.reels,style: _style),
     Text(TextConstants.store,style: _style),
     Text(TextConstants.profile,style: _style),
@@ -109,11 +108,227 @@ class _HomePageState extends State<HomePage> {
         showUnselectedLabels: false,
         selectedItemColor: ColorConstants.black,
         backgroundColor: ColorConstants.white,
-        unselectedItemColor: ColorConstants.black87,
+        unselectedItemColor: ColorConstants.black45,
         onTap: _onTap,
         type: BottomNavigationBarType.fixed,
         elevation: 5,
       ),
     );
   }
+}
+
+Widget StoryProfile(){
+  return Column(
+    children: [
+      SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top:20,left: 16),
+              child: Column(
+                children:  [
+                  Stack(
+                    children:const <Widget>[
+                      CircleAvatar(
+                      radius: 35,
+                      backgroundImage: AssetImage('assets/myprofile.png'),
+                    ),
+                    Positioned(
+                        right: -2,
+                        bottom: -2,
+                        child: CircleAvatar(
+                          radius: 12,
+                          backgroundColor: ColorConstants.white,
+                          child: CircleAvatar(
+                            radius: 10,
+                            backgroundImage: AssetImage('assets/addstory.png'),
+                          ),
+                    ))]
+                  ),
+                   const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                    child: Text(TextConstants.yourstory)),
+
+
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top:20,left: 16),
+              child: Column(
+                children:  [
+                  Stack(
+                      children:const <Widget>[
+                        CircleAvatar(
+                          radius: 35,
+                          backgroundImage: AssetImage('assets/9gag.png'),
+                        ),
+                      ]
+                  ),
+                  const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                      child: Text(TextConstants.gag,
+                          overflow: TextOverflow.ellipsis)),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top:20,left: 16),
+              child: Column(
+                children:  [
+                  Stack(
+                      children:const <Widget>[
+                        CircleAvatar(
+                          radius: 35,
+                          backgroundImage: AssetImage('assets/eceersunar.png'),
+                        ),
+                      ]
+                  ),
+                  const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                      child: Text(TextConstants.eceersunar,
+                          overflow: TextOverflow.ellipsis)),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top:20,left: 16),
+              child: Column(
+                children:  [
+                  Stack(
+                      children:const <Widget>[
+                        CircleAvatar(
+                          radius: 35,
+                          backgroundImage: AssetImage('assets/mstturkkalesi.png'),
+                        ),
+                      ]
+                  ),
+                  const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                      child: Text(TextConstants.mstturkkalesi,
+                          overflow: TextOverflow.ellipsis)),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top:20,left: 16),
+              child: Column(
+                children:  [
+                  Stack(
+                      children:const <Widget>[
+                        CircleAvatar(
+                          radius: 35,
+                          backgroundImage: AssetImage('assets/yosoymert.png'),
+                        ),
+                      ]
+                  ),
+                  const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                      child: Text(TextConstants.yosoymert,
+                          overflow: TextOverflow.ellipsis)),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top:20,left: 16),
+              child: Column(
+                children:  [
+                  Stack(
+                      children:const <Widget>[
+                        CircleAvatar(
+                          radius: 35,
+                          backgroundImage: AssetImage('assets/yagizdo.png'),
+                        ),
+                      ]
+                  ),
+                  const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                      child: Text(TextConstants.yagizdo,
+                          overflow: TextOverflow.ellipsis)),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top:20,left: 16),
+              child: Column(
+                children:  [
+                  Stack(
+                      children:const <Widget>[
+                        CircleAvatar(
+                          radius: 35,
+                          backgroundImage: AssetImage('assets/rihanna.png'),
+                        ),
+                      ]
+                  ),
+                  const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                      child: Text(TextConstants.rihanna,
+                          overflow: TextOverflow.ellipsis)),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top:20,left: 16),
+              child: Column(
+                children:  [
+                  Stack(
+                      children:const <Widget>[
+                        CircleAvatar(
+                          radius: 35,
+                          backgroundImage: AssetImage('assets/jacobelordi.png'),
+                        ),
+                      ]
+                  ),
+                  const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                      child: Text(TextConstants.jacobelordi,
+                          overflow: TextOverflow.ellipsis)),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top:20,left: 16),
+              child: Column(
+                children:  [
+                  Stack(
+                      children:const <Widget>[
+                        CircleAvatar(
+                          radius: 35,
+                          backgroundImage: AssetImage('assets/zendaya.png'),
+                        ),
+                      ]
+                  ),
+                  const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                      child: Text(TextConstants.zendaya,
+                          overflow: TextOverflow.ellipsis)),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top:20,left: 16),
+              child: Column(
+                children:  [
+                  Stack(
+                      children:const <Widget>[
+                        CircleAvatar(
+                          radius: 35,
+                          backgroundImage: AssetImage('assets/americanstyle.png'),
+                        ),
+                      ]
+                  ),
+                  const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                      child: Text(TextConstants.americanstyle,
+                          overflow: TextOverflow.ellipsis)),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+
+    ],
+  );
 }

@@ -14,4 +14,5 @@ class TextConstants{
   static const gag='9gag';
   static const zendaya='zendaya';
   static const americanstyle='americanstyle';
+  static const somewhereonearth='Somewhere on Earth';
 }

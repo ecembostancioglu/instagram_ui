@@ -71,9 +71,7 @@ class _HomePageState extends State<HomePage> {
 
 
       ),
-       body: Center(
-        child: _widget.elementAt(_selectedIndex),
-      ),
+       body: _widget.elementAt(_selectedIndex),
        bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -121,32 +119,219 @@ class _HomePageState extends State<HomePage> {
 
 
 Widget Posts(){
+
    const TextStyle _homeProfileStyle=
   TextStyle(fontSize: 18,fontWeight: FontWeight.w600);
+   const TextStyle _placeorpartnership=
+   TextStyle(fontSize: 14,fontWeight: FontWeight.normal);
 
-  return Column(
-    children: [
-        Row(
-          children: const [
-            Padding(
-              padding: EdgeInsets.only(left: 8,top: 2),
-              child: CircleAvatar(radius: 22,
-                backgroundImage: AssetImage('assets/story_bg.png'),
-                child: CircleAvatar(radius: 20,
-                  backgroundImage: AssetImage('assets/white_bg.png'),
-                  child: CircleAvatar(
-                    radius:18,
-                    backgroundImage:AssetImage('assets/gag.png'),),
-                ),
+
+   return SingleChildScrollView(
+
+     scrollDirection: Axis.vertical,
+     child: Column(
+      children: [
+          Column(
+            children: [
+              Row(
+                children:[
+                  const Padding(
+                    padding: EdgeInsets.only(left: 8,top: 2),
+                    child: CircleAvatar(radius: 22,
+                      backgroundImage: AssetImage('assets/story_bg.png'),
+                      child: CircleAvatar(radius: 20,
+                        backgroundImage: AssetImage('assets/white_bg.png'),
+                        child: CircleAvatar(
+                          radius:18,
+                          backgroundImage:AssetImage('assets/gag.png')),
+                      ),
+                    ),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 6),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(TextConstants.gag,
+                            style: _homeProfileStyle),
+                            SizedBox(height: 2),
+                            Text(TextConstants.somewhereonearth,
+                                style:_placeorpartnership),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Expanded( child: Container()),
+                  const Padding(
+                    padding: EdgeInsets.only(right:10),
+                    child: Icon(Icons.more_horiz),
+                  ),
+                ]),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Image.asset('assets/dart1.png'),
               ),
-            ),
+              SizedBox(height: 20),
+            ],
+          ),
+        Column(
+          children: [
+            Row(
+                children:[
+                  const Padding(
+                    padding: EdgeInsets.only(left: 8,top: 2),
+                    child: CircleAvatar(radius: 22,
+                      backgroundImage: AssetImage('assets/story_bg.png'),
+                      child: CircleAvatar(radius: 20,
+                        backgroundImage: AssetImage('assets/white_bg.png'),
+                        child: CircleAvatar(
+                            radius:18,
+                            backgroundImage:AssetImage('assets/gag.png')),
+                      ),
+                    ),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 6),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(TextConstants.gag,
+                                style: _homeProfileStyle),
+                            SizedBox(height: 2),
+                            Text(TextConstants.somewhereonearth,
+                                style:_placeorpartnership),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Expanded( child: Container()),
+                  const Padding(
+                    padding: EdgeInsets.only(right:10),
+                    child: Icon(Icons.more_horiz),
+                  ),
+                ]),
             Padding(
-              padding: EdgeInsets.only(left: 6),
-              child: Text(TextConstants.gag,
-              style: _homeProfileStyle),
-            )
+              padding: const EdgeInsets.only(top: 10),
+              child: Image.asset('assets/dart1.png'),
+            ),
+            SizedBox(height: 20),
           ],
-        )
-    ],
-  );
+        ),
+        Column(
+          children: [
+            Row(
+                children:[
+                  const Padding(
+                    padding: EdgeInsets.only(left: 8,top: 2),
+                    child: CircleAvatar(radius: 22,
+                      backgroundImage: AssetImage('assets/story_bg.png'),
+                      child: CircleAvatar(radius: 20,
+                        backgroundImage: AssetImage('assets/white_bg.png'),
+                        child: CircleAvatar(
+                            radius:18,
+                            backgroundImage:AssetImage('assets/gag.png')),
+                      ),
+                    ),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 6),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(TextConstants.gag,
+                                style: _homeProfileStyle),
+                            SizedBox(height: 2),
+                            Text(TextConstants.somewhereonearth,
+                                style:_placeorpartnership),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Expanded( child: Container()),
+                  const Padding(
+                    padding: EdgeInsets.only(right:10),
+                    child: Icon(Icons.more_horiz),
+                  ),
+                ]),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: Image.asset('assets/dart1.png'),
+            ),
+            SizedBox(height: 20),
+          ],
+        ),
+        Column(
+          children: [
+            Row(
+                children:[
+                  const Padding(
+                    padding: EdgeInsets.only(left: 8,top: 2),
+                    child: CircleAvatar(radius: 22,
+                      backgroundImage: AssetImage('assets/story_bg.png'),
+                      child: CircleAvatar(radius: 20,
+                        backgroundImage: AssetImage('assets/white_bg.png'),
+                        child: CircleAvatar(
+                            radius:18,
+                            backgroundImage:AssetImage('assets/gag.png')),
+                      ),
+                    ),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 6),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(TextConstants.gag,
+                                style: _homeProfileStyle),
+                            SizedBox(height: 2),
+                            Text(TextConstants.somewhereonearth,
+                                style:_placeorpartnership),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Expanded( child: Container()),
+                  const Padding(
+                    padding: EdgeInsets.only(right:10),
+                    child: Icon(Icons.more_horiz),
+                  ),
+                ]),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: Image.asset('assets/dart1.png'),
+            ),
+            SizedBox(height: 20),
+          ],
+        ),
+
+
+
+
+      ],
+  ),
+   );
 }

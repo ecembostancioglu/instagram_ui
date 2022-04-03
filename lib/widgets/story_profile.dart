@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_ui/widgets/my_story_card.dart';
-import 'package:instagram_ui/widgets/story_card.dart';
+import 'package:instagram_ui/widgets/posts.dart';
+import 'package:instagram_ui/widgets/story/my_story_card.dart';
+import 'package:instagram_ui/widgets/story/story_card.dart';
 import '../constants/text_constants.dart';
 import '../screens/home_page.dart';
 
@@ -49,7 +50,24 @@ Widget StoryProfile(){
         Column(
           children: [
             SizedBox(height: 20),
-            Posts(),
+            Posts(
+              personProfilePhoto:'assets/gag.png',
+              personName: TextConstants.gag,
+              location: TextConstants.somewhereonearth,
+              personPost: 'assets/dart.png',
+              numberofLikes: '7852',
+              personalComment:'Having fun with Dash',
+              personalCommentIcon: 'assets/blue_heart.png',
+            ),
+            Posts(
+                personProfilePhoto: 'assets/myprofile.png',
+                personName: TextConstants.ecembostancioglu,
+                location: TextConstants.izmir,
+                personPost: 'assets/myprofile.png',
+                numberofLikes: '224',
+                personalComment:'Summer Sunset ',
+                personalCommentIcon:'assets/sun_icon.png' ),
+
           ],
         )
 

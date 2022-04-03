@@ -8,6 +8,7 @@ class TextConstants{
   static const rihanna='badgalriri';
   static const mstturkkalesi='mstturkkalesi';
   static const eceersunar='eceersunar';
+  static const ecembostancioglu='ecembostancioglu';
   static const yosoymert='yosoymert';
   static const yagizdo='yagizdo';
   static const jacobelordi='jacobelordi';
@@ -15,4 +16,6 @@ class TextConstants{
   static const zendaya='zendaya';
   static const americanstyle='americanstyle';
   static const somewhereonearth='Somewhere on Earth';
+  static const izmir='İzmir';
+  static const add_a_comment='Add a comment...';
 }

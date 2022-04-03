@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../constants/text_constants.dart';
 
 class Posts extends StatelessWidget {
@@ -11,7 +10,8 @@ class Posts extends StatelessWidget {
   required this.personPost,
   required this.numberofLikes,
   required this.personalComment,
-  required this.personalCommentIcon}) : super(key: key);
+  required this.personalCommentIcon,
+  required this.timeText}) : super(key: key);
 
 
   String personProfilePhoto;
@@ -20,14 +20,15 @@ class Posts extends StatelessWidget {
   String personPost;
   String numberofLikes;
   String personalComment;
-  String? personalCommentIcon;
+  String personalCommentIcon;
+  String timeText;
 
   @override
   Widget build(BuildContext context) {
 
     const TextStyle _homeProfileStyle=
     TextStyle(fontSize: 18,fontWeight: FontWeight.w600);
-    const TextStyle _placeorpartnership=
+    const TextStyle _placeorPartnership=
     TextStyle(fontSize: 14,fontWeight: FontWeight.normal);
     const TextStyle _personName=
     TextStyle(fontSize: 18,fontWeight: FontWeight.w600);
@@ -35,6 +36,9 @@ class Posts extends StatelessWidget {
     TextStyle(fontSize: 18,fontWeight: FontWeight.normal);
     const TextStyle _addComment=
     TextStyle(fontSize: 16,fontWeight: FontWeight.w300);
+    const TextStyle _timeTextStyle=
+    TextStyle(fontSize: 14,fontWeight: FontWeight.w300);
+
 
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
@@ -45,11 +49,11 @@ class Posts extends StatelessWidget {
               Row(
                   children:[
                      Padding(
-                      padding: EdgeInsets.only(left: 8,top: 2),
+                      padding: const EdgeInsets.only(left: 8,top: 2),
                       child: CircleAvatar(radius: 22,
-                        backgroundImage: AssetImage('assets/story_bg.png'),
+                        backgroundImage: const AssetImage('assets/story_bg.png'),
                         child: CircleAvatar(radius: 20,
-                          backgroundImage: AssetImage('assets/white_bg.png'),
+                          backgroundImage: const AssetImage('assets/white_bg.png'),
                           child: CircleAvatar(
                               radius:18,
                               backgroundImage:AssetImage(personProfilePhoto)), //PROFİL FOTOSU
@@ -61,16 +65,16 @@ class Posts extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Padding(
-                          padding:  EdgeInsets.only(left: 6),
+                          padding:  const EdgeInsets.only(left: 6),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(personName,
                                   style: _homeProfileStyle),
-                              SizedBox(height: 2),
+                              const SizedBox(height: 2),
                               Text(location,
-                                  style:_placeorpartnership),
+                                  style:_placeorPartnership),
                             ],
                           ),
                         ),
@@ -84,12 +88,12 @@ class Posts extends StatelessWidget {
                   ]),
               Padding(
                 padding: const EdgeInsets.only(top: 10),
-                child: Container(
+                child: SizedBox(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height/2,
                     child: Image.asset(personPost)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
@@ -119,25 +123,25 @@ class Posts extends StatelessWidget {
                         width: 28),
                   )],
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Container(
-                padding: EdgeInsets.only(top: 4,left: 10),
+                padding: const EdgeInsets.only(top: 4,left: 10),
                 alignment: Alignment.centerLeft,
                   child: Text('$numberofLikes liked',style: _personName)),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Row(
                 children: [
                   Container(
-                      padding: EdgeInsets.only(top: 4,left: 10),
+                      padding: const EdgeInsets.only(top: 4,left: 10),
                       alignment: Alignment.centerLeft,
-                      child: Text('$personName',style: _personName),
+                      child: Text(personName,style: _personName),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left:10,top: 4),
+                    padding: const EdgeInsets.only(left:10,top: 4),
                     child: Row(
                       children: [
-                        Text('$personalComment',style: _personComment),
-                        Image.asset('$personalCommentIcon',width: 20,height: 20),
+                        Text(personalComment,style: _personComment),
+                        Image.asset(personalCommentIcon,width: 20,height: 20),
                       ],
                     ),
                   )
@@ -153,8 +157,8 @@ class Posts extends StatelessWidget {
                         CircleAvatar(
                             backgroundImage:AssetImage(personProfilePhoto),
                             radius: 14),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 8),
                           child: Text(TextConstants.add_a_comment,style:_addComment),
                         ),
                       ],
@@ -185,7 +189,18 @@ class Posts extends StatelessWidget {
 
 
               ),
-              SizedBox(height: 10)
+              const SizedBox(height: 5),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8,top: 8),
+                    child:
+                    Text(timeText,
+                        style:_timeTextStyle),),
+                ],
+              ),
+              const SizedBox(height: 10)
             ],
           )],
       ),

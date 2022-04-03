@@ -56,8 +56,9 @@ Widget StoryProfile(){
               location: TextConstants.somewhereonearth,
               personPost: 'assets/dart.png',
               numberofLikes: '7852',
-              personalComment:'Having fun with Dash',
+              personalComment:TextConstants.having_Fun_Dash,
               personalCommentIcon: 'assets/blue_heart.png',
+              timeText:TextConstants.timeText1,
             ),
             Posts(
                 personProfilePhoto: 'assets/myprofile.png',
@@ -66,7 +67,8 @@ Widget StoryProfile(){
                 personPost: 'assets/myprofile.png',
                 numberofLikes: '224',
                 personalComment:'Summer Sunset ',
-                personalCommentIcon:'assets/sun_icon.png' ),
+                personalCommentIcon:'assets/sun_icon.png',
+                timeText:TextConstants.timeText2),
 
           ],
         )

@@ -137,7 +137,7 @@ class Posts extends StatelessWidget {
                       child: Text(personName,style: _personName),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left:10,top: 4),
+                    padding: const EdgeInsets.only(left:4,top: 4),
                     child: Row(
                       children: [
                         Text(personalComment,style: _personComment),
@@ -182,12 +182,8 @@ class Posts extends StatelessWidget {
                      ],
                      ),
                    ),
-
-
                   ],
                 ),
-
-
               ),
               const SizedBox(height: 5),
               Row(

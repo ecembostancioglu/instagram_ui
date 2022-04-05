@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_ui/constants/text_constants.dart';
+import 'package:instagram_ui/screens/my_profile.dart';
 import '../constants/color_constants.dart';
-import '../widgets/story_profile.dart';
+import 'story_profile.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -16,12 +17,12 @@ class _HomePageState extends State<HomePage> {
   static const TextStyle _style=
       TextStyle(fontSize: 30,fontWeight: FontWeight.bold);
 
-  static List<Widget> _widget=<Widget>[
+  static final List<Widget> _widget=<Widget>[
     StoryProfile(),
-    Text(TextConstants.search,style: _style),
-    Text(TextConstants.reels,style: _style),
-    Text(TextConstants.store,style: _style),
-    Text(TextConstants.profile,style: _style),
+    const Text(TextConstants.search,style: _style),
+    const Text(TextConstants.reels,style: _style),
+    const Text(TextConstants.store,style: _style),
+    MyProfilePage(),
   ];
 
     void _onTap(int index){
@@ -33,48 +34,11 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-      Size size=MediaQuery.of(context).size;
     return Scaffold(
        backgroundColor: ColorConstants.white,
-       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: ColorConstants.white,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 8,top: 8),
-                  child: Image.asset('assets/instagram.png',
-                  fit: BoxFit.cover,
-                  height: size.height*0.06),
-                ),
-              ],
-            ),
-           Padding(
-             padding: const EdgeInsets.only(right: 8,top: 8),
-             child: Row(
-               children: [
-                 Image.asset('assets/plus.png',fit: BoxFit.cover,
-                     height: size.height*0.03),
-                SizedBox(width: size.width*0.05),
-                 Image.asset('assets/like.png',fit: BoxFit.cover,
-                     height: size.height*0.03),
-                 SizedBox(width: size.width*0.05),
-                 Image.asset('assets/dm.png',fit: BoxFit.cover,
-                     height: size.height*0.03),
-               ],
-             ),
-           ),
-          ],
-        ),
-
-
-      ),
        body: _widget.elementAt(_selectedIndex),
        bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: TextConstants.home,

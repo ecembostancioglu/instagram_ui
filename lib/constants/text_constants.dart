@@ -9,6 +9,7 @@ class TextConstants{
   static const mstturkkalesi='mstturkkalesi';
   static const eceersunar='eceersunar';
   static const ecembostancioglu='ecembostancioglu';
+  static const ecembostancioglu1='Ecem Bostancıoğlu';
   static const yosoymert='yosoymert';
   static const yagizdo='yagizdo';
   static const jacobelordi='jacobelordi';
@@ -17,12 +18,21 @@ class TextConstants{
   static const americanstyle='americanstyle';
   static const somewhereonearth='Somewhere on Earth';
   static const izmir='İzmir';
+  static const alacati='Alaçatı';
+  static const istanbul='İstanbul';
+  static const keysighttech='Keysight Technologies';
   static const add_a_comment='Add a comment...';
   static const having_Fun_Dash='Having fun with Dash';
+  static const keysight='Keysight..';
+  static const eceComment='Love';
   static const timeText1='24 minutes ago';
   static const timeText2='35 minutes ago';
   static const timeText3='58 minutes ago';
   static const timeText4='7 hours ago';
   static const timeText5='3 days ago';
   static const timeText6='1 week ago';
+  static const profile_title='ecembostancioglu';
+  static const post_no='24';
+  static const posts='Posts';
+  static const editProfile='Edit Profile';
 }

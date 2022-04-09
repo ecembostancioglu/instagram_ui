@@ -14,6 +14,7 @@ class _HomePageState extends State<HomePage> {
 
   int _selectedIndex=0;
 
+
   static const TextStyle _style=
       TextStyle(fontSize: 30,fontWeight: FontWeight.bold);
 
@@ -38,7 +39,7 @@ class _HomePageState extends State<HomePage> {
        backgroundColor: ColorConstants.white,
        body: _widget.elementAt(_selectedIndex),
        bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: TextConstants.home,
@@ -57,13 +58,9 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: CircleAvatar(
-                radius: 15,
-            backgroundColor: ColorConstants.white,
-            backgroundImage:AssetImage('assets/profile.png')),
-              activeIcon:CircleAvatar(radius: 18,
-                  backgroundColor: ColorConstants.black,
-                  child: CircleAvatar(radius: 17,
-                      backgroundColor:ColorConstants.white)),
+              radius: 15,
+              backgroundImage:AssetImage('assets/myprofile.png')),
+            backgroundColor: Colors.black,
             label: TextConstants.profile,
           ),
         ],

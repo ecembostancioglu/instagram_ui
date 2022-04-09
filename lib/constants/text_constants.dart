@@ -33,6 +33,16 @@ class TextConstants{
   static const timeText6='1 week ago';
   static const profile_title='ecembostancioglu';
   static const post_no='24';
-  static const posts='Posts';
   static const editProfile='Edit Profile';
+  static const followers='Followers';
+  static const following='Following';
+  static const followers_num='482';
+  static const following_num='287';
+  static const post='Posts';
+  static const highlight='Highlight';
+  static const paris='Paris';
+  static const santorini='Santorini';
+  static const rome='Rome';
+  static const budapest='Budapest';
+  static const prague='Prague';
 }

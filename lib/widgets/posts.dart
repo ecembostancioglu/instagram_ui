@@ -14,14 +14,14 @@ class Posts extends StatelessWidget {
   required this.timeText}) : super(key: key);
 
 
-  String personProfilePhoto;
-  String personName;
-  String location;
-  String personPost;
-  String numberofLikes;
-  String personalComment;
-  String personalCommentIcon;
-  String timeText;
+  final String personProfilePhoto;
+  final String personName;
+  final String location;
+  final String personPost;
+  final String numberofLikes;
+  final String personalComment;
+  final String personalCommentIcon;
+  final String timeText;
 
   @override
   Widget build(BuildContext context) {

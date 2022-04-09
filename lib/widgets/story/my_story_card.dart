@@ -10,9 +10,9 @@ class MyStoryCard extends StatelessWidget {
       : super(key: key);
 
 
-  String name;
-  String assetimage;
-  String addstory;
+  final String name;
+  final String assetimage;
+  final String addstory;
 
 
   @override

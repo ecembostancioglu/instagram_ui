@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_ui/widgets/posts.dart';
+import 'package:instagram_ui/widgets/posts/home_posts.dart';
 import 'package:instagram_ui/widgets/story/my_story_card.dart';
 import 'package:instagram_ui/widgets/story/story_card.dart';
 import '../constants/color_constants.dart';

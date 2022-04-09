@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../constants/text_constants.dart';
+import '../../constants/text_constants.dart';
 
 class Posts extends StatelessWidget {
 

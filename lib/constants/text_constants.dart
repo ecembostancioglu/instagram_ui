@@ -32,7 +32,7 @@ class TextConstants{
   static const timeText5='3 days ago';
   static const timeText6='1 week ago';
   static const profile_title='ecembostancioglu';
-  static const post_no='24';
+  static const post_no='22';
   static const editProfile='Edit Profile';
   static const followers='Followers';
   static const following='Following';
@@ -45,4 +45,6 @@ class TextConstants{
   static const rome='Rome';
   static const budapest='Budapest';
   static const prague='Prague';
+  static const tag_1='Photos and videos of you';
+  static const tag_2='When people tag you in photos and videos, they\'ll appear here.';
 }

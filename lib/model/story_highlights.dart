@@ -12,7 +12,7 @@ class StoryHighlights{
 
 }  List<StoryHighlights> highlightsItem=[
   StoryHighlights(thumbnail: 'assets/santorini.png', title: TextConstants.santorini),
-  StoryHighlights(thumbnail: 'assets/budapest.png', title: TextConstants.rome),
+  StoryHighlights(thumbnail: 'assets/budapest.png', title: TextConstants.budapest),
   StoryHighlights(thumbnail: 'assets/rome_1.png', title: TextConstants.rome),
   StoryHighlights(thumbnail: 'assets/prague.png', title: TextConstants.prague),
   StoryHighlights(thumbnail: 'assets/paris.png', title: TextConstants.paris),

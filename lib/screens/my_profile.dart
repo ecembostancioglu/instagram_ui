@@ -3,6 +3,9 @@ import 'package:instagram_ui/constants/color_constants.dart';
 import 'package:instagram_ui/constants/text_constants.dart';
 import 'package:instagram_ui/model/story_highlights.dart';
 
+import '../widgets/my_tags.dart';
+import '../widgets/posts/my_profile_posts.dart';
+
 class MyProfilePage extends StatelessWidget {
   const MyProfilePage({Key? key}) : super(key: key);
 
@@ -49,7 +52,8 @@ class MyProfilePage extends StatelessWidget {
                     myProfileWidget(context)
                   ]))
             ];
-          }, body: Column(
+          },
+          body: Column(
           children: [
             Material(
               color: ColorConstants.white,
@@ -67,7 +71,16 @@ class MyProfilePage extends StatelessWidget {
                     color: ColorConstants.black)),
                 ],
               ),
-            )
+            ),
+            Expanded(
+              child: TabBarView(
+                children: [
+                  MyProfilePosts(),
+                  MyTags(),
+                ],
+              ),
+            ),
+
           ],
         ),
         ),
@@ -160,7 +173,7 @@ class MyProfilePage extends StatelessWidget {
                 ),
               ],
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(top:10),
               child: Text(TextConstants.ecembostancioglu1,
               style: TextStyle(fontSize: 16),),
@@ -178,7 +191,7 @@ class MyProfilePage extends StatelessWidget {
                           return RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5));
                         } ) ,
-                          elevation:MaterialStateProperty.all(1),
+                          elevation:MaterialStateProperty.all(0),
                         backgroundColor:MaterialStateProperty.all(
                             ColorConstants.white)),
                        onPressed: (){},
@@ -200,7 +213,7 @@ class MyProfilePage extends StatelessWidget {
                             return RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5));
                           } ) ,
-                          elevation:MaterialStateProperty.all(1),
+                          elevation:MaterialStateProperty.all(0),
                           backgroundColor:MaterialStateProperty.all(
                               ColorConstants.white)),
                       onPressed: (){},
@@ -223,21 +236,19 @@ class MyProfilePage extends StatelessWidget {
                       Column(
                         children: [
                           CircleAvatar(
-                            radius: 30,
-                            backgroundColor: ColorConstants.grey_400,
-                            child:  Padding(
-                              padding: EdgeInsets.all(2),
+                            radius: 29,
+                            backgroundColor: ColorConstants.grey_200,
+                            child: CircleAvatar(
+                              radius: 27,
+                              backgroundImage:const AssetImage('assets/white_bg.png'),
                               child: CircleAvatar(
-                                child: CircleAvatar(
-                                  radius: 29,
-                                  backgroundImage: AssetImage(
-                                      highlightsItem[index].thumbnail),
-                                ),
+                                radius: 25,
+                                backgroundImage: AssetImage(highlightsItem[index].thumbnail),
                               ),
                             ),
                           ),
                            Padding(
-                            padding: EdgeInsets.only(top: 4),
+                            padding: const EdgeInsets.only(top: 4),
                             child: Text(highlightsItem[index].title),
                           )
                         ],
@@ -247,7 +258,7 @@ class MyProfilePage extends StatelessWidget {
                   );
                 })
               )
-            )
+            ),
           ],
         ),
       ),

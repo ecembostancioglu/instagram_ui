@@ -3,8 +3,8 @@ import 'package:instagram_ui/constants/color_constants.dart';
 import 'package:instagram_ui/constants/text_constants.dart';
 import 'package:instagram_ui/model/story_highlights.dart';
 
-import '../widgets/my_tags.dart';
-import '../widgets/posts/my_profile_posts.dart';
+import '../../widgets/my_tags.dart';
+import '../../widgets/posts/my_profile_posts.dart';
 
 class MyProfilePage extends StatelessWidget {
   const MyProfilePage({Key? key}) : super(key: key);
@@ -139,7 +139,8 @@ class MyProfilePage extends StatelessWidget {
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600)),
                         Text(TextConstants.post,
-                          style: TextStyle(fontSize: 16,
+                          style: TextStyle(
+                              fontSize: 16,
                             letterSpacing: 0.4),),
                         SizedBox(width: 80),
                       ],

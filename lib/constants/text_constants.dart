@@ -47,4 +47,11 @@ class TextConstants{
   static const prague='Prague';
   static const tag_1='Photos and videos of you';
   static const tag_2='When people tag you in photos and videos, they\'ll appear here.';
+  static const cancel='Cancel';
+  static const shop='Shop';
+  static const shops='Shops';
+  static const videos='Videos';
+  static const picks='Editor\'s picks';
+  static const collections='Collections';
+  static const guides='Guides';
 }

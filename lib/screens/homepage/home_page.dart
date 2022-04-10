@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_ui/constants/text_constants.dart';
-import 'package:instagram_ui/screens/my_profile.dart';
-import '../constants/color_constants.dart';
+import 'package:instagram_ui/screens/profilepage/my_profile.dart';
+import 'package:instagram_ui/screens/searchpage/search_page.dart';
+import 'package:instagram_ui/screens/shoppage/shop_page.dart';
+import '../../constants/color_constants.dart';
 import 'story_profile.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,10 +21,10 @@ class _HomePageState extends State<HomePage> {
       TextStyle(fontSize: 30,fontWeight: FontWeight.bold);
 
   static final List<Widget> _widget=<Widget>[
-    StoryProfile(),
-    const Text(TextConstants.search,style: _style),
+    const StoryProfile(),
+    SearchPage(),
     const Text(TextConstants.reels,style: _style),
-    const Text(TextConstants.store,style: _style),
+    ShopPage(),
     MyProfilePage(),
   ];
 

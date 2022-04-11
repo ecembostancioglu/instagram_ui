@@ -15,12 +15,10 @@ class SearchPage extends StatelessWidget {
         child: CustomScrollView(
           slivers: [
              SliverAppBar(
-               toolbarHeight: 80,
-               primary: false,
-             //  floating: false,
-               elevation: 1,
+               toolbarHeight: 60,
+               elevation: 0,
                backgroundColor: ColorConstants.white,
-              bottom: PreferredSize(
+              bottom: const PreferredSize(
                 preferredSize: Size.fromHeight(10.0),
                 child: Text(''),
               ),

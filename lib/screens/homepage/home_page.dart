@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_ui/constants/text_constants.dart';
 import 'package:instagram_ui/screens/profilepage/my_profile.dart';
+import 'package:instagram_ui/screens/reelspage/reels_page.dart';
 import 'package:instagram_ui/screens/searchpage/search_page.dart';
 import 'package:instagram_ui/screens/shoppage/shop_page.dart';
 import '../../constants/color_constants.dart';
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   static final List<Widget> _widget=<Widget>[
     const StoryProfile(),
     SearchPage(),
-    const Text(TextConstants.reels,style: _style),
+    ReelsPage(),
     ShopPage(),
     MyProfilePage(),
   ];

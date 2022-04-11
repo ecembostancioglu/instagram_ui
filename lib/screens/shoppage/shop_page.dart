@@ -42,6 +42,8 @@ class ShopPage extends StatelessWidget {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+
           children: [
             Container(
                 decoration: BoxDecoration(
@@ -61,6 +63,7 @@ class ShopPage extends StatelessWidget {
             SizedBox(
               height: 50,
               child: ListView(
+                shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 children: const [
                 ShopPageButton(text: TextConstants.shops),
@@ -71,25 +74,22 @@ class ShopPage extends StatelessWidget {
                 ],
               ),
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: SizedBox(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                child: GridView.builder(
-                    itemCount: content.length,
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        crossAxisSpacing: 3,
-                        mainAxisSpacing: 4,
-                        childAspectRatio: 1
-                    ),
-                    itemBuilder: (context,index){
-                      return GridTile(
-                          child: Image.asset(content[index].image));
-                    }),
-              ),
-            )],
+            GridView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                scrollDirection: Axis.vertical,
+                shrinkWrap: true,
+                itemCount: content.length,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 3,
+                    mainAxisSpacing: 4,
+                    childAspectRatio: 1
+                ),
+                itemBuilder: (_,index){
+                  return GridTile(
+                      child: Image.asset(content[index].image,
+                      fit: BoxFit.cover));
+                })],
         ),
       ),
     );

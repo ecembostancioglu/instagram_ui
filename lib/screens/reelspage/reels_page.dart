@@ -47,7 +47,8 @@ class ReelsPage extends StatelessWidget {
                   VideoWidget(
                     videoUrl:reelVideos[index].videos
               ),
-            ])
+                  PostContent()
+                ])
             );
           }
           )
@@ -101,12 +102,77 @@ class PostContent extends StatelessWidget {
         Container(
           height: 100,
         ),
-        Expanded(child: Row(
+        Expanded(
+            child: Row(
           children: [
             Expanded(
-                child: Container(
-
-            ))
+                child: Container()),
+             Container(
+              width: 80,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                    Container(
+                      height: 50,
+                      child: Icon(
+                          Icons.favorite_border,
+                          size: 32,
+                          color: ColorConstants.white),
+                    ),
+                  Text('1.1M',style: TextStyle(
+                      color: ColorConstants.white,
+                      fontSize: 14,
+                  fontWeight: FontWeight.w700)),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Container(
+                      height: 50,
+                      child: Icon(
+                          Icons.comment,
+                          size: 32,
+                          color: ColorConstants.white),
+                    ),
+                  ),
+                  Text('558',
+                      style: TextStyle(
+                          color: ColorConstants.white,
+                          fontSize: 14,
+                      fontWeight: FontWeight.w700)),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Container(
+                      height: 50,
+                      child: Icon(
+                          Icons.send,
+                          size: 32,
+                          color: ColorConstants.white),
+                    ),
+                  ),
+                  Container(
+                    height: 50,
+                    child: Icon(
+                        Icons.more_horiz_outlined,
+                        size: 32,
+                        color: ColorConstants.white),
+                  ),
+                  Container(
+                    height: 45,
+                    width: 45,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: ColorConstants.white,
+                          width: 2),
+                      borderRadius: BorderRadius.all(
+                          Radius.circular(20)),
+                      image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('assets/jacobelordi.png'))
+                    ),
+                  ),
+                  SizedBox(height:10)
+                ],
+              ),
+            )
           ],
         ))
       ],

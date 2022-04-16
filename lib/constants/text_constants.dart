@@ -55,4 +55,17 @@ class TextConstants{
   static const collections='Collections';
   static const guides='Guides';
   static const follow='Follow';
+  static const sunset='Sunset...';
+  static const stars='Look up at the stars...';
+  static const snow='Sweater weatherrrr';
+  static const breakfast='But first, breakfast.';
+  static const road='Let’s start this journey.';
+  static const music1='jaymesyng - Infinity';
+  static const music2='Bruno Mars - Talking to the Moon';
+  static const music3='Jason Mraz - Look for the Good';
+  static const music4='Dorian Marko - Cornfield Chase';
+  static const music5='Duke Dumont - Ocean Drive';
+
+
+
 }

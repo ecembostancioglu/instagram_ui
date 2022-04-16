@@ -1,9 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram_ui/constants/color_constants.dart';
 import 'package:instagram_ui/constants/text_constants.dart';
 import 'package:video_player/video_player.dart';
 import '../../model/reels_videos.dart';
+import '../../widgets/reels/reels_contents.dart';
 
 
 class ReelsPage extends StatelessWidget {
@@ -11,6 +12,55 @@ class ReelsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final List<String> favNumber=[
+      '1.1M',
+      '977B',
+      '659B',
+      '12,7B',
+      '208B',
+    ];
+    final List<String> commentNumber=[
+      '6.220',
+      '1.609',
+      '38',
+      '981',
+      '4.321',
+    ];
+
+    final List<String> profileImages=[
+      'assets/jacobelordi.png',
+      'assets/gag.png',
+      'assets/zendaya.png',
+      'assets/rihanna.png',
+      'assets/gag.png',
+    ];
+    final List<String> profileNames=[
+      TextConstants.jacobelordi,
+      TextConstants.gag,
+      TextConstants.zendaya,
+      TextConstants.rihanna,
+      TextConstants.gag,
+
+    ];
+
+    final List<String> profileComments=[
+      TextConstants.sunset,
+      TextConstants.stars,
+      TextConstants.snow,
+      TextConstants.breakfast,
+      TextConstants.road,
+
+    ];
+
+    final List<String> musics=[
+      TextConstants.music1,
+      TextConstants.music2,
+      TextConstants.music3,
+      TextConstants.music4,
+      TextConstants.music5,
+
+    ];
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -42,7 +92,18 @@ class ReelsPage extends StatelessWidget {
                   VideoWidget(
                     videoUrl:reelVideos[index].videos
               ),
-                  PostContent()
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      ReelsContents(
+                          favNumbers: favNumber[index],
+                          commentNumbers: commentNumber[index],
+                          profileImage:profileImages[index],
+                          profileName: profileNames[index],
+                          profileComment:profileComments[index],
+                          music: musics[index]),
+                    ],
+                  )
                 ])
             );
           }
@@ -53,7 +114,10 @@ class ReelsPage extends StatelessWidget {
 }
 
 class VideoWidget extends StatefulWidget {
-  const VideoWidget({Key? key,required this.videoUrl}) : super(key: key);
+  const VideoWidget({
+    Key? key,
+    required this.videoUrl}) : super(key: key);
+
   final String videoUrl;
   @override
   State<VideoWidget> createState() => _VideoWidgetState(this.videoUrl);
@@ -87,142 +151,4 @@ class _VideoWidgetState extends State<VideoWidget> {
 }
 
 
-class PostContent extends StatelessWidget {
-   PostContent({Key? key}) : super(key: key);
 
-  final double _iconHeight=28;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-         Container(
-           width: 80,
-           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-                Container(
-                  height: 50,
-                  child: SvgPicture.asset(
-                      'assets/like.svg',
-                      color: ColorConstants.white,
-                      height: _iconHeight),
-                ),
-              Text('1.1M',
-                  style: TextStyle(
-                  color: ColorConstants.white,
-                  fontSize: 15,
-              fontWeight: FontWeight.w700)),
-              Padding(
-                padding: const EdgeInsets.only(top: 10),
-                child: Container(
-                  height: 50,
-                  child:SvgPicture.asset(
-                      'assets/comment.svg',
-                      color: ColorConstants.white,
-                      height: _iconHeight),
-                ),
-              ),
-              Text('558',
-                  style: TextStyle(
-                      color: ColorConstants.white,
-                      fontSize: 15,
-                  fontWeight: FontWeight.w700)),
-              Padding(
-                padding: const EdgeInsets.only(top: 10),
-                child: Container(
-                  height: 50,
-                  child: SvgPicture.asset(
-                      'assets/share.svg',
-                      color: ColorConstants.white,
-                      height: _iconHeight),
-                ),
-              ),
-              Container(
-                height: 50,
-                child: Icon(
-                    Icons.more_horiz_outlined,
-                    size: 32,
-                    color: ColorConstants.white),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10),
-                child: Container(
-                  height: 40,
-                  width: 40,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                        color: ColorConstants.white,
-                        width: 2),
-                    borderRadius: const BorderRadius.all(
-                        Radius.circular(10)),
-                    image: const DecorationImage(
-                        fit: BoxFit.cover,
-                        image: AssetImage('assets/jacobelordi.png'))
-                  ),
-                ),
-              ),
-              const SizedBox(height:10)
-            ],
-          ),
-         )
-          ],
-        ),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              height: 100,
-              width: MediaQuery.of(context).size.width,
-        //      color: Colors.green,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.only(left: 10),
-                        child: CircleAvatar(
-                          radius:20,
-                          backgroundImage:AssetImage('assets/jacobelordi.png')),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.only(left: 8),
-                        child: Text(
-                          TextConstants.jacobelordi,
-                          style: TextStyle(
-                        fontSize: 16
-                        ),),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8),
-                        child: ElevatedButton(
-                            onPressed: (){},
-                            style: ButtonStyle(
-                                shape:MaterialStateProperty.resolveWith((states){
-                              return RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(5));
-                            } ),
-                              backgroundColor: MaterialStateProperty.all(ColorConstants.transparent)
-                            ),
-                            child:Text(
-                              TextConstants.follow,style: TextStyle(
-                              color: ColorConstants.white
-                            ),) ),
-                      )
-
-                    ],
-                  )
-                ],
-              ),
-            ),
-          ],
-        ),
-      ],
-    );
-  }
-}

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram_ui/constants/color_constants.dart';
 import 'package:instagram_ui/constants/text_constants.dart';
 import 'package:instagram_ui/model/story_highlights.dart';
@@ -28,13 +29,15 @@ class MyProfilePage extends StatelessWidget {
             centerTitle: false,
             title: Text(TextConstants.profile_title,
             style: TextStyle(fontSize: 24,
-              color: ColorConstants.black,fontWeight: FontWeight.w600,
+              color: ColorConstants.black,
+              fontWeight: FontWeight.w600,
             )),
             actions: [
               IconButton(onPressed: (){},
-                icon: Icon(Icons.add_box_outlined,
-                    size: 26,
-                    color: ColorConstants.black)),
+                icon:SvgPicture.asset(
+                    'assets/add.svg',
+                    color: ColorConstants.black,
+                    height: 28),),
               IconButton(onPressed: (){},
                   icon: Icon(Icons.menu,
                     size: 26,

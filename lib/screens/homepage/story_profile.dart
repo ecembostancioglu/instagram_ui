@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram_ui/widgets/posts/home_posts.dart';
 import 'package:instagram_ui/widgets/story/my_story_card.dart';
 import 'package:instagram_ui/widgets/story/story_card.dart';
@@ -34,7 +35,7 @@ class StoryProfile extends StatelessWidget {
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 8,top: 8),
+                      padding: const EdgeInsets.only(top: 8),
                       child: Image.asset('assets/instagram.png',
                           fit: BoxFit.cover,
                           height: size.height*0.06),
@@ -42,16 +43,19 @@ class StoryProfile extends StatelessWidget {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 8,top: 8),
+                  padding: const EdgeInsets.only(top: 8),
                   child: Row(
                     children: [
-                      Image.asset('assets/plus.png',fit: BoxFit.cover,
+                      SvgPicture.asset('assets/add.svg',
+                          fit: BoxFit.cover,
                           height: size.height*0.03),
                       SizedBox(width: size.width*0.05),
-                      Image.asset('assets/like.png',fit: BoxFit.cover,
+                      SvgPicture.asset('assets/like.svg',
+                          fit: BoxFit.cover,
                           height: size.height*0.03),
                       SizedBox(width: size.width*0.05),
-                      Image.asset('assets/dm.png',fit: BoxFit.cover,
+                      SvgPicture.asset('assets/messenger.svg',
+                          fit: BoxFit.cover,
                           height: size.height*0.03),
                     ],
                   ),

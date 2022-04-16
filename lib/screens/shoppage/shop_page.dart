@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram_ui/constants/text_constants.dart';
 import 'package:instagram_ui/widgets/shop_page_button/shop_page_button.dart';
 import '../../constants/color_constants.dart';
@@ -27,8 +28,10 @@ class ShopPage extends StatelessWidget {
            children: [
              Padding(
                padding: const EdgeInsets.all(8),
-               child: Icon(Icons.star,
-                color: ColorConstants.black),
+               child:SvgPicture.asset(
+                   'assets/bookmark.svg',
+                   color: ColorConstants.black,
+                   height: 28),
              ),
              Padding(
                padding: const EdgeInsets.all(8),

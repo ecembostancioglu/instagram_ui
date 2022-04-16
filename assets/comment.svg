@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   fill="none"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="comment.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs13" />
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="33.666667"
+     inkscape:cx="11.985149"
+     inkscape:cy="12.014851"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9" />
+  <mask
+     id="path-1-outside-1_0_308"
+     maskUnits="userSpaceOnUse"
+     x="1.99402"
+     y="2"
+     width="21"
+     height="21"
+     fill="black">
+    <rect
+       fill="white"
+       x="1.99402"
+       y="2"
+       width="21"
+       height="21"
+       id="rect2" />
+    <path
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="M17.9777 17.3318C19.2393 15.9168 20.006 14.0509 20.006 12.006C20.006 7.5844 16.4216 4 12 4C7.57842 4 3.99402 7.5844 3.99402 12.006C3.99402 16.4276 7.57842 20.012 12 20.012C13.521 20.012 14.9429 19.5878 16.1539 18.8514L18.4073 19.3347L17.9777 17.3318Z"
+       id="path4" />
+  </mask>
+  <path
+     d="M17.9777 17.3318L16.4849 16.0008L15.8092 16.7586L16.0222 17.7513L17.9777 17.3318ZM16.1539 18.8514L16.5734 16.8958L15.795 16.7289L15.1148 17.1425L16.1539 18.8514ZM18.4073 19.3347L17.9878 21.2902L21.0114 21.9388L20.3628 18.9152L18.4073 19.3347ZM18.006 12.006C18.006 13.5414 17.4325 14.938 16.4849 16.0008L19.4705 18.6628C21.0461 16.8956 22.006 14.5605 22.006 12.006H18.006ZM12 6C15.317 6 18.006 8.68897 18.006 12.006H22.006C22.006 6.47983 17.5262 2 12 2V6ZM5.99402 12.006C5.99402 8.68897 8.68299 6 12 6V2C6.47385 2 1.99402 6.47983 1.99402 12.006H5.99402ZM12 18.012C8.68299 18.012 5.99402 15.323 5.99402 12.006H1.99402C1.99402 17.5321 6.47385 22.012 12 22.012V18.012ZM15.1148 17.1425C14.208 17.6939 13.1442 18.012 12 18.012V22.012C13.8978 22.012 15.6778 21.4817 17.1931 20.5602L15.1148 17.1425ZM15.7345 20.8069L17.9878 21.2902L18.8268 17.3792L16.5734 16.8958L15.7345 20.8069ZM20.3628 18.9152L19.9332 16.9123L16.0222 17.7513L16.4518 19.7542L20.3628 18.9152Z"
+     fill="black"
+     mask="url(#path-1-outside-1_0_308)"
+     id="path7" />
+</svg>

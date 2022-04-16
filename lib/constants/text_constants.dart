@@ -54,4 +54,5 @@ class TextConstants{
   static const picks='Editor\'s picks';
   static const collections='Collections';
   static const guides='Guides';
+  static const follow='Follow';
 }

@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram_ui/constants/color_constants.dart';
 import 'package:instagram_ui/constants/text_constants.dart';
 import 'package:video_player/video_player.dart';
-
 import '../../model/reels_videos.dart';
 
 
 class ReelsPage extends StatelessWidget {
   ReelsPage({Key? key}) : super(key: key);
-
-  final List<Map> reelItems = [
-    { 'video': 'assets/videos/video.mp4'},
-    { 'video': 'assets/videos/video.mov'},
-    { 'video': 'assets/videos/video2.mov'},
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +32,7 @@ class ReelsPage extends StatelessWidget {
       ),
       body: PageView.builder(
         scrollDirection: Axis.vertical,
+          itemCount: reelVideos.length,
           itemBuilder: (context, index) {
             return Container(
               height: MediaQuery.of(context).size.height,
@@ -93,88 +88,140 @@ class _VideoWidgetState extends State<VideoWidget> {
 
 
 class PostContent extends StatelessWidget {
-  const PostContent({Key? key}) : super(key: key);
+   PostContent({Key? key}) : super(key: key);
+
+  final double _iconHeight=28;
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Container(
-          height: 100,
-        ),
-        Expanded(
-            child: Row(
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Expanded(
-                child: Container()),
-             Container(
-              width: 80,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                    Container(
-                      height: 50,
-                      child: Icon(
-                          Icons.favorite_border,
-                          size: 32,
-                          color: ColorConstants.white),
-                    ),
-                  Text('1.1M',style: TextStyle(
+         Container(
+           width: 80,
+           child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+                Container(
+                  height: 50,
+                  child: SvgPicture.asset(
+                      'assets/like.svg',
                       color: ColorConstants.white,
-                      fontSize: 14,
+                      height: _iconHeight),
+                ),
+              Text('1.1M',
+                  style: TextStyle(
+                  color: ColorConstants.white,
+                  fontSize: 15,
+              fontWeight: FontWeight.w700)),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Container(
+                  height: 50,
+                  child:SvgPicture.asset(
+                      'assets/comment.svg',
+                      color: ColorConstants.white,
+                      height: _iconHeight),
+                ),
+              ),
+              Text('558',
+                  style: TextStyle(
+                      color: ColorConstants.white,
+                      fontSize: 15,
                   fontWeight: FontWeight.w700)),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10),
-                    child: Container(
-                      height: 50,
-                      child: Icon(
-                          Icons.comment,
-                          size: 32,
-                          color: ColorConstants.white),
-                    ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Container(
+                  height: 50,
+                  child: SvgPicture.asset(
+                      'assets/share.svg',
+                      color: ColorConstants.white,
+                      height: _iconHeight),
+                ),
+              ),
+              Container(
+                height: 50,
+                child: Icon(
+                    Icons.more_horiz_outlined,
+                    size: 32,
+                    color: ColorConstants.white),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Container(
+                  height: 40,
+                  width: 40,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: ColorConstants.white,
+                        width: 2),
+                    borderRadius: const BorderRadius.all(
+                        Radius.circular(10)),
+                    image: const DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('assets/jacobelordi.png'))
                   ),
-                  Text('558',
-                      style: TextStyle(
-                          color: ColorConstants.white,
-                          fontSize: 14,
-                      fontWeight: FontWeight.w700)),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10),
-                    child: Container(
-                      height: 50,
-                      child: Icon(
-                          Icons.send,
-                          size: 32,
-                          color: ColorConstants.white),
-                    ),
-                  ),
-                  Container(
-                    height: 50,
-                    child: Icon(
-                        Icons.more_horiz_outlined,
-                        size: 32,
-                        color: ColorConstants.white),
-                  ),
-                  Container(
-                    height: 45,
-                    width: 45,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                          color: ColorConstants.white,
-                          width: 2),
-                      borderRadius: BorderRadius.all(
-                          Radius.circular(20)),
-                      image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('assets/jacobelordi.png'))
-                    ),
-                  ),
-                  SizedBox(height:10)
+                ),
+              ),
+              const SizedBox(height:10)
+            ],
+          ),
+         )
+          ],
+        ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 100,
+              width: MediaQuery.of(context).size.width,
+        //      color: Colors.green,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.only(left: 10),
+                        child: CircleAvatar(
+                          radius:20,
+                          backgroundImage:AssetImage('assets/jacobelordi.png')),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 8),
+                        child: Text(
+                          TextConstants.jacobelordi,
+                          style: TextStyle(
+                        fontSize: 16
+                        ),),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8),
+                        child: ElevatedButton(
+                            onPressed: (){},
+                            style: ButtonStyle(
+                                shape:MaterialStateProperty.resolveWith((states){
+                              return RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5));
+                            } ),
+                              backgroundColor: MaterialStateProperty.all(ColorConstants.transparent)
+                            ),
+                            child:Text(
+                              TextConstants.follow,style: TextStyle(
+                              color: ColorConstants.white
+                            ),) ),
+                      )
+
+                    ],
+                  )
                 ],
               ),
-            )
+            ),
           ],
-        ))
+        ),
       ],
     );
   }

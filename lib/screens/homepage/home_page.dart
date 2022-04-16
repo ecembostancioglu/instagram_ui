@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram_ui/constants/text_constants.dart';
 import 'package:instagram_ui/screens/profilepage/my_profile.dart';
 import 'package:instagram_ui/screens/reelspage/reels_page.dart';
@@ -8,6 +9,8 @@ import '../../constants/color_constants.dart';
 import 'story_profile.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -18,8 +21,6 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex=0;
 
 
-  static const TextStyle _style=
-      TextStyle(fontSize: 30,fontWeight: FontWeight.bold);
 
   static final List<Widget> _widget=<Widget>[
     const StoryProfile(),
@@ -42,26 +43,34 @@ class _HomePageState extends State<HomePage> {
        backgroundColor: ColorConstants.white,
        body: _widget.elementAt(_selectedIndex),
        bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+        items:  <BottomNavigationBarItem>[
+           BottomNavigationBarItem(
+            icon:SvgPicture.asset(
+                'assets/home.svg',
+                height: 24),
             label: TextConstants.home,
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.search),
+              icon: SvgPicture.asset(
+                  'assets/search.svg',
+              height: 24),
             label: TextConstants.search,
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.ondemand_video),
+              icon: SvgPicture.asset(
+                  'assets/reels.svg',
+                  height: 24),
             label: TextConstants.reels,
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_bag_outlined),
+              icon:SvgPicture.asset(
+                  'assets/shop.svg',
+                  height: 24),
             label: TextConstants.store,
           ),
           BottomNavigationBarItem(
             icon: CircleAvatar(
-              radius: 15,
+              radius: 12,
               backgroundImage:AssetImage('assets/myprofile.png')),
             backgroundColor: Colors.black,
             label: TextConstants.profile,

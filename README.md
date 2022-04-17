@@ -22,4 +22,3 @@ Instagram UI Clone application.
 ![shoppage](https://user-images.githubusercontent.com/72046458/163695677-8bfbdd2f-2334-48ae-8ec3-321ef450d5d5.png)
 # Profile Page
 ![profilepage1](https://user-images.githubusercontent.com/72046458/163695681-4eb4511a-8698-4ca8-a0ae-549598be6c97.png)
-![profilepage2](https://user-images.githubusercontent.com/72046458/163695689-3417b78b-1cf3-44de-a65a-71aae51a3caf.png)

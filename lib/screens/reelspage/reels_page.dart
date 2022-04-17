@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:instagram_ui/constants/color_constants.dart';
 import 'package:instagram_ui/constants/text_constants.dart';
-import 'package:video_player/video_player.dart';
 import '../../model/reels_videos.dart';
 import '../../widgets/reels/reels_contents.dart';
+import '../../widgets/reels/video_widget.dart';
 
 
 class ReelsPage extends StatelessWidget {
@@ -84,7 +83,7 @@ class ReelsPage extends StatelessWidget {
         scrollDirection: Axis.vertical,
           itemCount: reelVideos.length,
           itemBuilder: (context, index) {
-            return Container(
+            return SizedBox(
               height: MediaQuery.of(context).size.height,
               width:MediaQuery.of(context).size.width,
               child: Stack(
@@ -101,54 +100,15 @@ class ReelsPage extends StatelessWidget {
                           profileImage:profileImages[index],
                           profileName: profileNames[index],
                           profileComment:profileComments[index],
-                          music: musics[index]),
-                    ],
+                          music: musics[index])],
                   )
                 ])
             );
-          }
-          )
+          })
     );
-
   }
 }
 
-class VideoWidget extends StatefulWidget {
-  const VideoWidget({
-    Key? key,
-    required this.videoUrl}) : super(key: key);
-
-  final String videoUrl;
-  @override
-  State<VideoWidget> createState() => _VideoWidgetState(this.videoUrl);
-}
-
-class _VideoWidgetState extends State<VideoWidget> {
-
-  VideoPlayerController? _videoPlayerController;
- final String videoUrl;
-  _VideoWidgetState(this.videoUrl);
-
-  @override
-  void initState() {
-    super.initState();
-   _videoPlayerController=VideoPlayerController.asset(videoUrl)
-    ..initialize().then((value){
-      _videoPlayerController!.play();
-      setState(() {
-
-      });
-    });
-  }
-
-
-  
-  @override
-  Widget build(BuildContext context) {
-    return VideoPlayer(_videoPlayerController!);
-
-  }
-}
 
 
 

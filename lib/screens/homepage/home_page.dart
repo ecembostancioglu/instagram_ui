@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
             icon: CircleAvatar(
               radius: 12,
               backgroundImage:AssetImage('assets/myprofile.png')),
-            backgroundColor: Colors.black,
+            backgroundColor: ColorConstants.black,
             label: TextConstants.profile,
           ),
         ],
